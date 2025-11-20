@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8001", // your backend URL
+  baseURL: "https://tinyurl-backend-yu79.onrender.com/", // your backend URL
 });
 
 export const createShortUrl = (originalUrl) =>
