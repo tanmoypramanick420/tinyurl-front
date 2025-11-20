@@ -35,14 +35,14 @@ export default function ShortURLApp() {
 
     try {
       // Uses CRA proxy in development (frontend/package.json proxy)
-      const res = await fetch("/url", {
+      const res = await fetch("https://tinyurl-backend-yu79.onrender.com/url", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),
       });
       const data = await res.json();
 
-      const backendURL = "http://localhost:8001";
+      const backendURL = "https://tinyurl-backend-yu79.onrender.com";
       setSuccess(`${backendURL}/${data.id}`);
     } catch (e) {
       setError("Failed to generate short URL. Try again.");
