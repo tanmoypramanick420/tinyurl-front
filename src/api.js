@@ -5,4 +5,4 @@ const API = axios.create({
 });
 
 export const createShortUrl = (originalUrl) =>
-  API.post("/api/url/shorten", { originalUrl });
+  API.post("/url/shorten", { originalUrl });
